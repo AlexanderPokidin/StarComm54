@@ -7,8 +7,8 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame extends ApplicationAdapter {
-	SpriteBatch batch;
-	Background background;
+	private SpriteBatch batch;
+	private Background background;
 
 	@Override
 	public void create () {
@@ -19,14 +19,14 @@ public class MyGdxGame extends ApplicationAdapter {
 	@Override
 	public void render () {
 		update();
-		Gdx.gl.glClearColor(0.54f, 0.57f, 0.21f, 1);
+		Gdx.gl.glClearColor(1f, 1f, 1f, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		batch.begin();
 		background.render(batch);
 		batch.end();
 	}
 
-	public void update () {
+	private void update() {
 		background.update();
 	}
 	
