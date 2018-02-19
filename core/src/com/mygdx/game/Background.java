@@ -30,7 +30,6 @@ public class Background {
     private Texture textureStar;
     private Star[] stars;
 
-
     public Background() {
         texture = new Texture("bg.png");
         textureStar = new Texture("star12.tga");
@@ -45,7 +44,6 @@ public class Background {
         for (int i = 0; i < stars.length; i++) {
             batch.draw(textureStar, stars[i].position.x, stars[i].position.y);
         }
-
     }
 
     public void update() {
